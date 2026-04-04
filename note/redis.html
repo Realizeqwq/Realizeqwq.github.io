@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Redis 笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background: #409eff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .back-btn:hover { background: #66b1ff; transform: translateX(-3px); }
+        h1 { color: #409eff; margin-bottom: 20px; border-left: 4px solid #409eff; padding-left: 15px; }
+        h2 { margin: 25px 0 15px 0; color: #333; }
+        ul { margin: 10px 0 10px 30px; line-height: 1.8; color: #555; }
+
+        body.dark {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        body.dark .container {
+            background: #2d2d3a;
+        }
+        body.dark h1 {
+            color: #66b1ff;
+            border-left-color: #66b1ff;
+        }
+        body.dark h2 {
+            color: #e0e0e0;
+        }
+        body.dark ul, body.dark li {
+            color: #c0c0c0;
+        }
+        body.dark .back-btn {
+            background: #3a6ea5;
+        }
+        body.dark .back-btn:hover {
+            background: #4d7db8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/index" class="back-btn">← 返回首页</a>
+        <h1>📌 Redis 学习笔记</h1>
+        
+        <h2>什么是 Redis？</h2>
+        <p>Redis 是一个开源的内存数据结构存储系统，常用作数据库、缓存和消息代理。</p>
+        
+        <h2>支持的数据结构</h2>
+        <ul>
+            <li>字符串 (String)</li>
+            <li>哈希 (Hash)</li>
+            <li>列表 (List)</li>
+            <li>集合 (Set)</li>
+            <li>有序集合 (Sorted Set)</li>
+        </ul>
+        
+        <h2>学习进度</h2>
+        <ul>
+            <li>✅ Redis 安装和基本命令</li>
+            <li>✅ 五种数据结构的用法</li>
+            <li>🔄 正在学习：持久化机制（RDB/AOF）</li>
+            <li>⏳ 计划学习：哨兵模式和集群模式</li>
+        </ul>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const theme = urlParams.get('theme')
+        if (theme === 'dark') {
+            document.body.classList.add('dark')
+        }
+    </script>
+</body>
+</html>

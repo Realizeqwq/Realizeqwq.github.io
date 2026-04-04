@@ -1,0 +1,1 @@
+import{_ as o,o as r,a as s,b as n}from"./index-DxAtN0d8.js";const l={};function u(t,e){return r(),s("div",null,[e[1]||(e[1]=n("h1",null,"测试成功！",-1)),e[2]||(e[2]=n("p",null,"路由配置正常",-1)),n("button",{onClick:e[0]||(e[0]=a=>t.$router.push("/"))},"返回首页")])}const p=o(l,[["render",u]]);export{p as default};

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background: #409eff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .back-btn:hover { background: #66b1ff; transform: translateX(-3px); }
+        h1 { color: #409eff; margin-bottom: 20px; border-left: 4px solid #409eff; padding-left: 15px; }
+        h2 { margin: 25px 0 15px 0; color: #333; }
+        ul { margin: 10px 0 10px 30px; line-height: 1.8; color: #555; }
+        li { margin: 5px 0; }
+
+        body.dark {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        body.dark .container {
+            background: #2d2d3a;
+        }
+        body.dark h1 {
+            color: #66b1ff;
+            border-left-color: #66b1ff;
+        }
+        body.dark h2 {
+            color: #e0e0e0;
+        }
+        body.dark ul, body.dark li {
+            color: #c0c0c0;
+        }
+        body.dark .back-btn {
+            background: #3a6ea5;
+        }
+        body.dark .back-btn:hover {
+            background: #4d7db8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/index" class="back-btn">← 返回首页</a>
+        <h1>📌 Vue 学习笔记</h1>
+        
+        <h2>什么是 Vue？</h2>
+        <p>Vue.js 是一套用于构建用户界面的渐进式框架。它采用自底向上增量开发的设计，核心库只关注视图层。</p>
+        
+        <h2>核心特性</h2>
+        <ul>
+            <li><strong>响应式数据绑定</strong>：数据变化自动更新视图</li>
+            <li><strong>组件化开发</strong>：提高代码复用性</li>
+            <li><strong>虚拟 DOM</strong>：提升渲染性能</li>
+            <li><strong>Composition API</strong>：更好的逻辑组织方式</li>
+        </ul>
+        
+        <h2>学习进度</h2>
+        <ul>
+            <li>✅ 掌握 Vue 基础语法</li>
+            <li>✅ 完成组件化开发实践</li>
+            <li>🔄 正在学习：Composition API 和 Pinia 状态管理</li>
+            <li>⏳ 计划学习：Vue Router 高级用法</li>
+        </ul>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const theme = urlParams.get('theme')
+        if (theme === 'dark') {
+            document.body.classList.add('dark')
+        }
+    </script>
+</body>
+</html>

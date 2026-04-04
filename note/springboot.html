@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot 笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            transition: all 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background: #409eff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .back-btn:hover { background: #66b1ff; transform: translateX(-3px); }
+        h1 { color: #409eff; margin-bottom: 20px; border-left: 4px solid #409eff; padding-left: 15px; }
+        h2 { margin: 25px 0 15px 0; color: #333; }
+        h3 { margin: 20px 0 10px 0; color: #667eea; }
+        p { line-height: 1.8; color: #555; margin: 10px 0; }
+        ul, ol { margin: 10px 0 10px 30px; line-height: 1.8; color: #555; }
+        li { margin: 5px 0; }
+
+        body.dark {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        body.dark .container {
+            background: #2d2d3a;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+        body.dark h1 {
+            color: #66b1ff;
+            border-left-color: #66b1ff;
+        }
+        body.dark h2 {
+            color: #e0e0e0;
+        }
+        body.dark h3 {
+            color: #a0c4ff;
+        }
+        body.dark p, body.dark ul, body.dark li {
+            color: #c0c0c0;
+        }
+        body.dark .back-btn {
+            background: #3a6ea5;
+        }
+        body.dark .back-btn:hover {
+            background: #4d7db8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/index" class="back-btn">← 返回首页</a>
+        <h1>📌 Spring Boot 学习笔记</h1>
+        
+        <h2>什么是 Spring Boot？</h2>
+        <p>Spring Boot 是一个用于构建独立、生产级 Spring 应用的框架。它简化了配置，让开发者能快速启动项目。</p>
+        
+        <h2>核心特性</h2>
+        <ul>
+            <li><strong>自动配置</strong>：根据项目依赖自动配置 Spring 应用</li>
+            <li><strong>起步依赖</strong>：简化 Maven/Gradle 配置</li>
+            <li><strong>嵌入式服务器</strong>：内置 Tomcat，无需部署 WAR 包</li>
+            <li><strong>生产就绪</strong>：提供健康检查、指标监控等功能</li>
+        </ul>
+        
+        <h2>学习进度</h2>
+        <ul>
+            <li>✅ 了解 Spring Boot 基本概念</li>
+            <li>✅ 创建第一个 Spring Boot 项目</li>
+            <li>🔄 正在学习：自动配置原理和 Starter 机制</li>
+            <li>⏳ 计划学习：Spring Boot Actuator 监控</li>
+        </ul>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const theme = urlParams.get('theme')
+        if (theme === 'dark') {
+            document.body.classList.add('dark')
+        }
+    </script>
+</body>
+</html>

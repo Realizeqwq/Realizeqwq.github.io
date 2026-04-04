@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>日语 N2 笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background: #409eff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .back-btn:hover { background: #66b1ff; transform: translateX(-3px); }
+        h1 { color: #409eff; margin-bottom: 20px; border-left: 4px solid #409eff; padding-left: 15px; }
+        h2 { margin: 25px 0 15px 0; color: #333; }
+        p { line-height: 1.8; color: #555; margin: 10px 0; }
+        ul { margin: 10px 0 10px 30px; line-height: 1.8; color: #555; }
+
+        body.dark {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        body.dark .container {
+            background: #2d2d3a;
+        }
+        body.dark h1 {
+            color: #66b1ff;
+            border-left-color: #66b1ff;
+        }
+        body.dark h2 {
+            color: #e0e0e0;
+        }
+        body.dark p, body.dark ul, body.dark li {
+            color: #c0c0c0;
+        }
+        body.dark .back-btn {
+            background: #3a6ea5;
+        }
+        body.dark .back-btn:hover {
+            background: #4d7db8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/index" class="back-btn">← 返回首页</a>
+        <h1>📌 日语 N2 备考笔记</h1>
+        
+        <h2>考试信息</h2>
+        <p>日语能力测试 N2 级，7 月考试。目标是顺利通过！</p>
+        
+        <h2>学习计划</h2>
+        <ul>
+            <li>📖 单词：《红宝书 N2》每天 50 个</li>
+            <li>📖 语法：《蓝宝书 N2》每天 5 条</li>
+            <li>🎧 听力：每天听 NHK 新闻 30 分钟</li>
+            <li>📝 阅读：每周做 3 套真题阅读</li>
+        </ul>
+        
+        <h2>学习进度</h2>
+        <ul>
+            <li>✅ N5-N3 基础已复习完毕</li>
+            <li>🔄 正在学习：N2 核心词汇和语法</li>
+            <li>⏳ 计划：6 月开始刷真题</li>
+        </ul>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const theme = urlParams.get('theme')
+        if (theme === 'dark') {
+            document.body.classList.add('dark')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+import{D as s,y as c,o as n,a as u}from"./index-DxAtN0d8.js";const i={__name:"index",setup(p){const e=s(),t=c(),{params:o,query:a}=e,{path:r}=o;return t.replace({path:"/"+r,query:a}),(_,m)=>(n(),u("div"))}};export{i as default};

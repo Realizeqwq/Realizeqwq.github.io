@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>金阁寺 读书笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background: #409eff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .back-btn:hover { background: #66b1ff; transform: translateX(-3px); }
+        h1 { color: #409eff; margin-bottom: 20px; border-left: 4px solid #409eff; padding-left: 15px; }
+        h2 { margin: 25px 0 15px 0; color: #333; }
+        p { line-height: 1.8; color: #555; margin: 10px 0; }
+        .quote { font-style: italic; color: #667eea; padding: 15px; background: #f5f7fa; border-radius: 10px; margin: 15px 0; }
+
+        body.dark {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        body.dark .container {
+            background: #2d2d3a;
+        }
+        body.dark h1 {
+            color: #66b1ff;
+            border-left-color: #66b1ff;
+        }
+        body.dark h2 {
+            color: #e0e0e0;
+        }
+        body.dark p, body.dark li {
+            color: #c0c0c0;
+        }
+        body.dark .quote {
+            background: #3a3a4a;
+            color: #a0c4ff;
+        }
+        body.dark .back-btn {
+            background: #3a6ea5;
+        }
+        body.dark .back-btn:hover {
+            background: #4d7db8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/index" class="back-btn">← 返回首页</a>
+        <h1>📌 《金阁寺》读书笔记</h1>
+        
+        <h2>书籍信息</h2>
+        <p>作者：三岛由纪夫<br>出版年份：1956年</p>
+        
+        <h2>内容简介</h2>
+        <p>《金阁寺》是三岛由纪夫的代表作，讲述了青年沟口对金阁寺之美从向往到毁灭的心理历程。小说探讨了美与丑、生存与毁灭的哲学命题。</p>
+        
+        <h2>读书心得</h2>
+        <p>三岛由纪夫的文字极具冲击力，他用细腻的心理描写展现了主人公对美的执念。金阁寺的美成为了主人公的枷锁，最终他选择毁灭它来获得自由。这部小说让我思考：美到底是什么？是客观存在，还是主观感受？</p>
+        
+        <h2>经典语录</h2>
+        <div class="quote">“美的东西，对我来说，是仇敌。”</div>
+        <div class="quote">“金阁寺不是一座建筑，而是一种象征。”</div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const theme = urlParams.get('theme')
+        if (theme === 'dark') {
+            document.body.classList.add('dark')
+        }
+    </script>
+</body>
+</html>
